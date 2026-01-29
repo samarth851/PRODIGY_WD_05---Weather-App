@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeroCast | Prodigy Task-05</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <video autoplay muted loop id="bgVideo" class="video-bg">
+            <source src="videos/cloudy sky.mp4" type="video/mp4">
+        </video>
+
+        <div class="video-overlay"></div>
+
+        <header class="main-header">
+            <div class="logo">AeroCast<span class="dot">.</span></div>
+            <div class="search-container glass-card">
+                <div class="input-wrapper">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <input type="text" id="cityInput" placeholder="Search city..." autocomplete="off">
+                </div>
+                <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button id="locBtn" class="gps-btn"><i class="fa-solid fa-location-crosshairs"></i></button>
+            </div>
+        </header>
+
+        <p id="errorMsg" class="error"></p>
+
+        <main class="weather-grid">
+            <section class="left-panel glass-card pop-in">
+                <div class="location-date">
+                    <h2 id="cityName">--</h2>
+                    <p id="date">--</p>
+                </div>
+                <div class="hero-temp">
+                    <h1 id="temp">--°</h1>
+                    <img id="weatherIcon" src="" alt="" class="weather-icon-big">
+                </div>
+                <h3 id="condition" class="condition-text">--</h3>
+            </section>
+
+            <section class="right-panel">
+                <div class="detail-card glass-card pop-in" style="animation-delay: 0.1s;">
+                    <div class="card-icon"><i class="fa-solid fa-temperature-half"></i></div>
+                    <div>
+                        <p class="label">Feels Like</p>
+                        <h4 id="feelsLike">--°</h4>
+                    </div>
+                </div>
+                <div class="detail-card glass-card pop-in" style="animation-delay: 0.2s;">
+                    <div class="card-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <div>
+                        <p class="label">Humidity</p>
+                        <h4 id="humidity">--%</h4>
+                    </div>
+                </div>
+                <div class="detail-card glass-card pop-in" style="animation-delay: 0.3s;">
+                    <div class="card-icon"><i class="fa-solid fa-wind"></i></div>
+                    <div>
+                        <p class="label">Wind</p>
+                        <h4 id="wind">-- km/h</h4>
+                    </div>
+                </div>
+                <div class="detail-card glass-card pop-in" style="animation-delay: 0.4s;">
+                    <div class="card-icon"><i class="fa-regular fa-eye"></i></div>
+                    <div>
+                        <p class="label">Visibility</p>
+                        <h4 id="visibility">-- km</h4>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
