@@ -55,17 +55,18 @@ function changeBackgroundVideo(data) {
 
     let videoSrc = "";
 
+    // 👇 Yahan changes kiye hain (Spaces -> Underscores)
     if (weather.includes("rain") || weather.includes("drizzle") || weather.includes("thunder")) {
-        videoSrc = "videos/Rainy sky.mp4";
+        videoSrc = "videos/rainy_sky.mp4";
     } else if (weather.includes("cloud") || weather.includes("smoke") || weather.includes("haze") || weather.includes("mist") || weather.includes("fog")) {
-        if (isDay) videoSrc = "videos/cloudy sky.mp4";
-        else videoSrc = "videos/night sky cloudy.mp4";
+        if (isDay) videoSrc = "videos/cloudy_sky.mp4";
+        else videoSrc = "videos/night_sky_cloudy.mp4";
     } else if (weather.includes("clear")) {
-        if (isDay) videoSrc = "videos/clear sunny sky.mp4";
-        else videoSrc = "videos/clear night sky.mp4";
+        if (isDay) videoSrc = "videos/clear_sunny_sky.mp4";
+        else videoSrc = "videos/clear_night_sky.mp4";
     } else {
-        if (isDay) videoSrc = "videos/cloudy sky.mp4";
-        else videoSrc = "videos/night sky cloudy.mp4";
+        if (isDay) videoSrc = "videos/cloudy_sky.mp4";
+        else videoSrc = "videos/night_sky_cloudy.mp4";
     }
 
     const currentSrc = bgVideo.getAttribute("src");
