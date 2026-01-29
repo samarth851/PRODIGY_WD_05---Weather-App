@@ -7,7 +7,7 @@ A visually immersive weather application that brings the weather to life! **Aero
 
 
 ## 🚀 Live Demo
-[**Click here to view the Live App**]
+https://samarth851.github.io/PRODIGY_WD_05---Weather-App/
 
 ---
 
